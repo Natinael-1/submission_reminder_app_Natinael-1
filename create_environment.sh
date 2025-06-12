@@ -1,10 +1,10 @@
 #!/bin/bash
 # prompt user to enter their name
 read -p "Please enter your name: " name
-mkdir submission_reminder_"$name"
+mkdir "submission_reminder_$name"
 
-mkdir submission_reminder_"$name"/app/
-cat <<EOF > submission_reminder_"$name"/app/reminder.sh
+mkdir "submission_reminder_$name"/app/
+cat << 'EOF' > "submission_reminder_$name"/app/reminder.sh
 #!/bin/bash
 
 # Source environment variables and helper functions
@@ -21,10 +21,10 @@ echo "--------------------------------------------"
 
 check_submissions $submissions_file
 EOF
-chmod +x submission_reminder_"$name"/app/reminder.sh
+chmod +x "submission_reminder_$name"/app/reminder.sh
 
-mkdir submission_reminder_"$name"/modules/
-cat <<EOF > submission_reminder_"$name"/modules/functions.sh
+mkdir "submission_reminder_$name"/modules/
+cat << 'EOF' > submission_reminder_"$name"/modules/functions.sh
 #!/bin/bash
 
 # Function to read submissions file and output students who have not submitted
@@ -46,10 +46,10 @@ function check_submissions {
     done < <(tail -n +2 "$submissions_file") # Skip the header
 }
 EOF
-chmod +x submission_reminder_"$name"/modules/functions.sh
+chmod +x "submission_reminder_$name"/modules/functions.sh
 
-mkdir submission_reminder_"$name"/assets/
-cat <<EOF > submission_reminder_"$name"/assets/submissions.txt
+mkdir "submission_reminder_$name"/assets/
+cat << 'EOF' > "submission_reminder_$name"/assets/submissions.txt
 student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
@@ -64,20 +64,21 @@ Belaynesh, Team Building, not submitted
 Getaneh, Mission, submitted
 EOF
 
-mkdir submission_reminder_"$name"/config/
-cat <<EOF > submission_reminder_"$name"/config/config.env
+mkdir "submission_reminder_$name"/config/
+cat << 'EOF' > "submission_reminder_$name"/config/config.env
 # This is the config file
 ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
 EOF
 
-cat <<EOF > submission_reminder_"$name"/startup.sh
+cat << 'EOF' > "submission_reminder_$name"/startup.sh
 #!/bin/bash
 # A startup script
+cd "$(dirname "$0")"
 echo "Checking the status of assignment submission, please wait a second"
 echo "Looking....."
 sleep 2
 ./app/reminder.sh
 
 EOF
-chmod +x submission_reminder_"$name"/startup.sh
+chmod +x "submission_reminder_$name"/startup.sh
