@@ -71,15 +71,13 @@ ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
 EOF
 
-cat << EOF > submission_reminder_"$name"/startup.sh
+cat <<EOF > submission_reminder_"$name"/startup.sh
 #!/bin/bash
 # A startup script
 echo "Checking the status of assignment submission, please wait a second"
 echo "Looking....."
 sleep 2
 ./app/reminder.sh
-
-
 
 EOF
 chmod +x submission_reminder_"$name"/startup.sh
