@@ -1,13 +1,18 @@
 #!/bin/bash
-read -p "What is the name of assignment to check submission status?: " assignment_name
-# Loading the content of create_environment.sh file. This is important to navigate to the folder later created by the file.
-source ./create_environment.sh
-# This line should go to inside of the config.env file
-source ./"submission_reminder_$name"/config/config.env
-# Checking whether the directory for the config/config.env exists or not
-if [[ ! -d "submission_reminder_$name" ]]; then
-echo "The directory does not exist please run the create_environment.sh script first"
-fi
-# Substituting the value of ASSIGNMENT variable with the value the user entered
-sed i 's/ASSIGNMENT="Shell Navigation"/ASSIGNMENT="$assignment_name"/'
 
+# Prompt user to enter assignment name
+read -p "What is the name of assignment to check submission status?: " assignment_name
+
+# accessing the directory
+directory_from_env_file=$(find . -maxdepth 1 -type d -name "submission_reminder_*" | head -n 1 | sed 's|^\./||')
+name_for_user="${directory_from_env_file#submission_reminder_}"
+
+# Checking whether the directory for the config/config.env exists or not
+if [[ ! -d "$directory_from_env_file" ]]; then
+    echo "The directory does not exist please run the create_environment.sh script first"
+fi
+
+# Substituiting the variable value with the new assignment the user entered to check
+sed -i "s/^ASSIGNMENT=\".*\"/ASSIGNMENT=\"$assignment_name\"/" "$directory_from_env_file/config/config.env"
+# Running startup.sh script to launch the reminder.sh script which inturn does the job
+cd "$directory_from_env_file" && ./startup.sh
