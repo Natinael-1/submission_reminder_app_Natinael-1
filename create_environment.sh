@@ -49,7 +49,7 @@ EOF
 chmod +x "submission_reminder_$name"/modules/functions.sh
 
 mkdir "submission_reminder_$name"/assets/
-cat << 'EOF' > "submission_reminder_$name"/assets/submissions.txt
+cat << EOF > "submission_reminder_$name"/assets/submissions.txt
 student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
@@ -65,7 +65,7 @@ Getaneh, Mission, submitted
 EOF
 
 mkdir "submission_reminder_$name"/config/
-cat << 'EOF' > "submission_reminder_$name"/config/config.env
+cat << EOF > "submission_reminder_$name"/config/config.env
 # This is the config file
 ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
@@ -74,7 +74,6 @@ EOF
 cat << 'EOF' > "submission_reminder_$name"/startup.sh
 #!/bin/bash
 # A startup script
-cd "$(dirname "$0")"
 echo "Checking the status of assignment submission, please wait a second"
 echo "Looking....."
 sleep 2
