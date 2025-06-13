@@ -57,10 +57,10 @@ Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
 # Below are the students' records I added
 Abebe,  Shell Script, not submitted
-Mulugeta, Self Reflection, submitted
-Abenezer, Memory Reflection, submitted
-Workinesh, SWOT Analysis, not submitted
-Belaynesh, Team Building, not submitted
+Mulugeta, Shell script, submitted
+Abenezer, Self Reflection, submitted
+Workinesh, Self Reflection, not submitted
+Belaynesh, Mission, not submitted
 Getaneh, Mission, submitted
 EOF
 
