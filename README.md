@@ -13,6 +13,8 @@ You will see the output displayed including the number of remaining days.
 This script depends on create_environment.sh script
 You need to run create_environment.sh script before running copilot_shell_script.sh
 When run, copilot_shell_script.sh prompts the user to enter the name of assignment to check submission status. 
+
+         ADD.......MAY BE LOOPING
 After receiving the assignment to check from the user, it displays the assignment you entered, number of days remaining and the submission status.
 YOU DON'T NEED TO RUN startup.sh SCRIPT. IT IS AUTOMATICALLY RUN BY copilot_shell_script.sh SCRIPT. YOU ONLY NEED TO RUN copilot_shell_script.sh SCRIPT
           # INSTALLATION
