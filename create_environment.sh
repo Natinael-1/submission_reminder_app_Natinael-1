@@ -4,10 +4,11 @@ read -p "Please enter your name: " name
 mkdir "submission_reminder_$name"
 
 mkdir "submission_reminder_$name"/app/
+# Writing the content of reminder.sh
 cat << 'EOF' > "submission_reminder_$name"/app/reminder.sh
 #!/bin/bash
 
-# Source environment variables and helper functions
+# Sourcing environment variables and helper functions
 source ./config/config.env
 source ./modules/functions.sh
 
@@ -24,6 +25,7 @@ EOF
 chmod +x "submission_reminder_$name"/app/reminder.sh
 
 mkdir "submission_reminder_$name"/modules/
+# Writing the content of functions.sh script
 cat << 'EOF' > submission_reminder_"$name"/modules/functions.sh
 #!/bin/bash
 
@@ -49,6 +51,7 @@ EOF
 chmod +x "submission_reminder_$name"/modules/functions.sh
 
 mkdir "submission_reminder_$name"/assets/
+# Writing the content of submissions.txt file
 cat << EOF > "submission_reminder_$name"/assets/submissions.txt
 student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
@@ -57,20 +60,29 @@ Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
 # Below are the students' records I added
 Abebe,  Shell Script, not submitted
-Mulugeta, Shell Script, submitted
-Abenezer, Self Reflection, submitted
+Mulugeta, Shell Script, not submitted
+Abenezer, Self Reflection, not submitted
 Workinesh, Self Reflection, not submitted
 Belaynesh, Mission, not submitted
-Getaneh, Mission, submitted
+Getaneh, Mission, not submitted
+# Adding even more members
+Mamado,  Shell Script, not submitted
+Abigail, Shell Script, not submitted
+Ayelech, Self Reflection, not submitted
+Bizunesh, Self Reflection, not submitted
+Deginet, Mission, not submitted
+Solomon, Mission, not submitted
 EOF
 
 mkdir "submission_reminder_$name"/config/
+# Writing the contents of config.env file
 cat << EOF > "submission_reminder_$name"/config/config.env
 # This is the config file
 ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
 EOF
 
+# Writing the contents of startup.sh script
 cat << 'EOF' > "submission_reminder_$name"/startup.sh
 #!/bin/bash
 # A startup script
