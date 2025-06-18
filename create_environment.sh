@@ -59,14 +59,13 @@ Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
 # Below are the students' records I added
-Abebe,  Shell Script, not submitted
+Abebe, Shell Script, not submitted
 Mulugeta, Shell Script, not submitted
 Abenezer, Self Reflection, not submitted
 Workinesh, Self Reflection, not submitted
 Belaynesh, Mission, not submitted
 Getaneh, Mission, not submitted
-# Adding even more members
-Mamado,  Shell Script, not submitted
+Mamado, Shell Script, not submitted
 Abigail, Shell Script, not submitted
 Ayelech, Self Reflection, not submitted
 Bizunesh, Self Reflection, not submitted
