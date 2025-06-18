@@ -1,4 +1,4 @@
-   Submission Reminder App
+           Submission Reminder App
 This project creates an app that remainds students about the assignment deadlines
 Submission reminder app is made from two scripts:
   1) create_environment.sh script. 
@@ -19,17 +19,18 @@ After receiving the assignment to check from the user, it displays the assignmen
 YOU DON'T NEED TO RUN startup.sh SCRIPT. IT IS AUTOMATICALLY RUN BY copilot_shell_script.sh SCRIPT. YOU ONLY NEED TO RUN copilot_shell_script.sh SCRIPT
   
 
-   INSTALLATION
+        INSTALLATION
 Steps to run the app in your local machine
-   git clone GitHub_URL
-   cd submission_reminder_app_Natinael-1
-   ./create_environment.sh
-   cd submission_reminder_app_{yourname}(please replace "yourname" by the name you entered)
-   ./startup.sh(to check submission status for "Shell Navigation" assignment)
+        git clone GitHub_URL
+        cd submission_reminder_app_Natinael-1
+       ./create_environment.sh
+       cd submission_reminder_app_{yourname}(please replace "yourname" by the name you entered)
+     ./startup.sh(to check submission status for "Shell Navigation" assignment)
 Steps to check status of other assignments the user entered
-   ./copilot_shell_script.sh(You will be prompted to enter type of assignment, please enter only one assignment at a time)
+     ./copilot_shell_script.sh(You will be prompted to enter type of assignment, please enter only one assignment at a time)
 
-   AUTHOR
+          
+       AUTHOR
     Natinael-1(GitHub username)
 
 
