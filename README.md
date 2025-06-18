@@ -17,8 +17,9 @@ When run, copilot_shell_script.sh prompts the user to enter the name of assignme
 The user should enter the assignment that exists. If the user enters invalid assignment, he/she will be prompted again with option to choose
 After receiving the assignment to check from the user, it displays the assignment you entered, number of days remaining and the submission status.
 YOU DON'T NEED TO RUN startup.sh SCRIPT. IT IS AUTOMATICALLY RUN BY copilot_shell_script.sh SCRIPT. YOU ONLY NEED TO RUN copilot_shell_script.sh SCRIPT
-          INSTALLATION
+  
 
+         INSTALLATION
 Steps to run the app in your local machine
    git clone GitHub_URL
    cd submission_reminder_app_Natinael-1
