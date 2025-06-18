@@ -89,6 +89,7 @@ cat << 'EOF' > "submission_reminder_$name"/startup.sh
 echo "Checking the status of assignment submission, please wait a second"
 echo "Looking....."
 sleep 2
+echo "Here are the submission status for the assignment you entered"
 ./app/reminder.sh
 
 EOF
