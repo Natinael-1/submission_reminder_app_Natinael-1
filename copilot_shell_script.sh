@@ -26,14 +26,6 @@ echo "The assignment you entered doesn't exist. Please choose from these ( ${Ass
 read -p "What is the name of assignment to check submission status?: " assignment_name
 fi
 
-
-
-# Checking whether the directory for the config/config.env exists or not
-if [[ ! -d "$directory_from_env_file" ]]; then
-    echo "The directory does not exist please run the create_environment.sh script first"
-fi
-
-
 # Substituiting the variable value with the new assignment the user entered to check
 sed -i "s/^ASSIGNMENT=\".*\"/ASSIGNMENT=\"$assignment_name\"/" "$directory_from_env_file/config/config.env"
 
