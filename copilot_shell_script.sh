@@ -6,8 +6,7 @@ Assignments=("Shell Navigation" Git "Shell Basics" "Shell Script" "Self Reflecti
 echo "Please choose assignment from  these ( ${Assignments[o]},${Assignments[1]},${Assignments[2]},${Assignments[3]},${Assignments[4]},${Assignments[5]} )"
 read -p "What is the name of assignment to check submission status?: " assignment_name
 
-# accessing the directory
-# This is directory where config.env exists
+# accessing the directory created early by create_environment.sh scriptx
 directory_from_env_file=$(find . -maxdepth 1 -type d -name "submission_reminder_*" | tail -1)
 # Checking whether assignment the user entered exists or not
 # If the user enters assignment that doesn't exist, the user should be reprompted to choose from the assignments listed
