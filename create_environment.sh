@@ -1,7 +1,8 @@
 #!/bin/bash
 # prompt user to enter their name
-read -p "Please enter your name: " name
+read -p "Please enter your name to create a directory: " name
 mkdir "submission_reminder_$name"
+echo "Directory created successfully"
 
 mkdir "submission_reminder_$name"/app/
 # Writing the content of reminder.sh
