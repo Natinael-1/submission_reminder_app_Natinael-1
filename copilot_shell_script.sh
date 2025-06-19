@@ -9,11 +9,9 @@ read -p "What is the name of assignment to check submission status?: " assignmen
 # accessing the directory
 # This is directory where config.env exists
 directory_from_env_file=$(find . -maxdepth 1 -type d -name "submission_reminder_*" | tail -1)
-name_for_user="${directory_from_env_file#submission_reminder_}"
 # Checking whether assignment the user entered exists or not
 # If the user enters assignment that doesn't exist, the user should be reprompted to choose from the assignments listed
 exists=false
-Assignments=("Shell Navigation" Git "Shell Basics" "Shell Script" "Self Reflection" Mission)
 for assign in "${Assignments[@]}"; do
  if [[ "$assign" == "$assignment_name" ]]
  then
