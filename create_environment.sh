@@ -52,13 +52,12 @@ chmod +x "submission_reminder_$name"/modules/functions.sh
 
 mkdir "submission_reminder_$name"/assets/
 # Writing the content of submissions.txt file
-cat << EOF > "submission_reminder_$name"/assets/submissions.txt
+cat << 'EOF' > "submission_reminder_$name"/assets/submissions.txt
 student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
-# Below are the students' records I added
 Abebe, Shell Script, not submitted
 Mulugeta, Shell Script, not submitted
 Abenezer, Self Reflection, not submitted
@@ -75,7 +74,7 @@ EOF
 
 mkdir "submission_reminder_$name"/config/
 # Writing the contents of config.env file
-cat << EOF > "submission_reminder_$name"/config/config.env
+cat << 'EOF' > "submission_reminder_$name"/config/config.env
 # This is the config file
 ASSIGNMENT="Shell Navigation"
 DAYS_REMAINING=2
